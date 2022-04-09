@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" >
+</head>
+<body>
+
+<div class="Heading">Classification of Diabetic Retinopathy stages using keras </div>
+<br />
+<div class="navigation">
+    <a href="/" class="nav-button"> Home </a>
+    <a href="/about" class="nav-button">About</a>
+</div>
+<br />
+<br />
+<h1>Results for the given Retina Image {{ image }}</h1>
+<H2>Accuracy:</H2><h2>{{ Accuracy }}</h2>
+<table>
+    <tr>
+        <td>Stage</td>
+        <td>Percentage</td>
+    </tr>
+
+    <tr>
+        <td>Normal</td>
+        <td>{{stages["Normal"]}}</td>
+    </tr>
+    <tr>
+        <td>Mild</td>
+        <td>{{stages["Mild"]}}</td>
+    </tr>
+    <tr>
+        <td>Moderate</td>
+        <td>{{stages["Moderate"]}}</td>
+    </tr>
+    <tr>
+        <td>Severe</td>
+        <td>{{stages["Severe"]}}</td>
+    </tr>
+     <tr>
+        <td>Proliferative</td>
+        <td>{{stages["Proliferative"]}}</td>
+    </tr>
+</table>
+<H1>Result is:{{answer}}</H1>
+</body>
+</html>
